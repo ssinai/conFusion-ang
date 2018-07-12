@@ -13,4 +13,19 @@ body {
 .container {
     margin: 20px;
     display:flex;
+    // background-color: red;
+}
+
+// p {
+//   background-color: cyan;
+// }
+
+mat-list {
+  margin-left: 0px;
+}
+
+mat-list-item {
+  padding-left:10px;
+  padding-bottom:50px;
+  // background-color: yellow;
 }
