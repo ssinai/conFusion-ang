@@ -17,7 +17,7 @@
     <mat-card>
       <mat-card-header>
         <mat-card-title>
-          <h3 *ngIf="dish">{{dish.name | uppercase}}</h3>
+          <h3>{{dish.name | uppercase}}</h3>
         </mat-card-title>
       </mat-card-header>
       <img mat-card-image src={{dish.image}} alt={{dish.name}}>
@@ -30,6 +30,9 @@
         <button mat-button>SHARE</button>
       </mat-card-actions>
     </mat-card>
+  </div>
+  <div [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
 
@@ -49,6 +52,9 @@
         </mat-list-item>
       </mat-list>
     </mat-card>
+  </div>
+  <div [hidden]="dish">
+    <mat-spinner></mat-spinner><h4>Loading . . . Please Wait</h4>
   </div>
 
 </div>
