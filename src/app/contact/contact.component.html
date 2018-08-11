@@ -67,8 +67,8 @@
         <td>
           <mat-slide-toggle formControlName="agree">May we contact you?</mat-slide-toggle>
         </td>
-        <td>
-          <mat-select placeholder="How?" formControlName="contacttype">
+         <td>
+          <mat-select placeholder="How?" id="how" formControlName="contacttype">
             <mat-option *ngFor="let ctype of contactType" [value]="ctype">
               {{ ctype }}
             </mat-option>
@@ -80,7 +80,8 @@
           <textarea matInput formControlName="message" placeholder="Your Feedback" rows=12></textarea>
         </mat-form-field>
       </p>
-      <button type="submit" mat-button class="background-primary text-floral-white">Submit</button>
+      <button type="submit" mat-button  class="background-primary text-floral-white"
+        [disabled]="feedbackForm.invalid">Submit</button>
     </form>
   </div>
 
