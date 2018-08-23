@@ -23,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DishService } from './services/dish.service';
 import { PromotionService } from "./services/promotion.service";
 import { LeaderService } from "./services/leader.service";
-import { ProcessHTTPMsgService } from './services/process-httpmsg.service'
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
+import { FeedbackService } from "./services/feedback.service";
 
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -85,7 +86,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     PromotionService,
     LeaderService,
     {provide: 'BaseURL', useValue: baseURL},
-    ProcessHTTPMsgService
+    ProcessHTTPMsgService,
+    FeedbackService
   ],
   entryComponents: [
     LoginComponent
